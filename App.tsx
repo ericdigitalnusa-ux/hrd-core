@@ -5,6 +5,7 @@ import NewInterview from './components/NewInterview';
 import CandidateList from './components/CandidateList';
 import CandidateAnalysis from './components/CandidateAnalysis';
 import QuestionGenerator from './components/QuestionGenerator';
+import UserGuide from './components/UserGuide';
 import { MOCK_CANDIDATES } from './constants';
 import { Candidate } from './types';
 import { Bell, Search, UserCircle } from 'lucide-react';
@@ -53,6 +54,8 @@ const App: React.FC = () => {
         return <NewInterview onAnalyzeComplete={handleAnalysisComplete} />;
       case 'question-generator':
         return <QuestionGenerator />;
+      case 'guide':
+        return <UserGuide />;
       case 'details':
         return selectedCandidate ? (
           <CandidateAnalysis 
@@ -80,6 +83,7 @@ const App: React.FC = () => {
                currentView === 'candidates' ? 'Kandidat' :
                currentView === 'new-interview' ? 'Analisis Baru' :
                currentView === 'question-generator' ? 'Pertanyaan Cerdas' :
+               currentView === 'guide' ? 'Panduan Penggunaan' :
                'Profil Kandidat'}
             </h2>
             <p className="text-slate-500 text-sm">

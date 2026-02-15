@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Users, FilePlus, Settings, LogOut, Activity, MessageSquarePlus } from 'lucide-react';
+import { LayoutDashboard, Users, FilePlus, Settings, LogOut, Activity, MessageSquarePlus, BookOpen } from 'lucide-react';
 
 interface SidebarProps {
   currentView: string;
@@ -12,6 +12,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, setCurrentView }) => {
     { id: 'candidates', label: 'Daftar Kandidat', icon: Users },
     { id: 'new-interview', label: 'Analisis Baru', icon: FilePlus },
     { id: 'question-generator', label: 'Buat Pertanyaan', icon: MessageSquarePlus },
+    { id: 'guide', label: 'Panduan', icon: BookOpen }, // New Menu Item
     { id: 'settings', label: 'Pengaturan', icon: Settings },
   ];
 
