@@ -1,0 +1,7 @@
+{
+  "name": "TalentInsight AI",
+  "description": "Analisis Wawancara Cerdas dan Dasbor HR didukung oleh Gemini AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
